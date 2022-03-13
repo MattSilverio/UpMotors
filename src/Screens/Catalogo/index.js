@@ -1,18 +1,21 @@
 import React from "react";
-import { cars } from "../../Assets/Utils/cars";
 
 
-export default function Catalogo({}){
+// tentar passar o objeto via props em routes
+
+export default function Catalogo(props){
   return (
     <>
       <h2>Catalogo</h2>
-      {cars.map((car) => {
-        return(
-          <>
-            <img src={car.path} alt="Error" /> 
-          </>
-        )
-      })}
+      <div>
+        {props.cars.map((car) => {
+          return(
+            <div key={car.id}>
+              <img  src={car.path} alt="Error" /> 
+            </div>
+          )
+        })}
+      </div>
     </>
   )
 }

@@ -10,7 +10,7 @@ export default function Header(){
         <UlHeader>
           {abas.map((aba) => {
             return (
-              <LiHeader><LinkHeader to={aba.rota}>{aba.aba}</LinkHeader></LiHeader>
+              <LiHeader key={aba.id}><LinkHeader to={aba.rota}>{aba.aba}</LinkHeader></LiHeader>
             
               )
           })}                          
