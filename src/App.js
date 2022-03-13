@@ -1,5 +1,7 @@
+import './App.css'
 import Header from "./Components/Header";
 import Rotas from "./Routes/routes";
+
 
 function App() {
   return (

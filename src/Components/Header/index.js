@@ -1,33 +1,19 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import { LiHeader, UlHeader , NavHeader} from './style'
+import { LiHeader, UlHeader , NavHeader, LinkHeader, TitleHeader} from './style'
+import { abas } from '../../Assets/Utils/abas'
 
 export default function Header(){
-  const abas = [
-    {
-      aba: "Início",
-      rota: "/inicio"
-    },
-    {
-      aba: "Catálogo",
-      rota: "/catalogo"
-    },
-    {
-      aba: "Contato",
-      rota: "/contato"
-    },
-  ]
-
   return(
     <>
       <NavHeader>
-        <h2>UpMotors</h2>
+        <TitleHeader>Up<span style={{color: "#e9ebf8"}}>Motors</span></TitleHeader>
         <UlHeader>
           {abas.map((aba) => {
             return (
-              <LiHeader><Link to={aba.rota}>{aba.aba}</Link></LiHeader>
-            )
-          })}                   
+              <LiHeader><LinkHeader to={aba.rota}>{aba.aba}</LinkHeader></LiHeader>
+            
+              )
+          })}                          
         </UlHeader>
       </NavHeader>
     </>
