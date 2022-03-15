@@ -1,21 +1,21 @@
 import React from "react";
+import { cars } from "../../Assets/Utils/cars";
+import { DivCard, DivGrid } from "./style";
+import { Link } from "react-router-dom";
 
-
-// tentar passar o objeto via props em routes
-
-export default function Catalogo(props){
+export default function Catalogo(){
   return (
     <>
-      <h2>Catalogo</h2>
-      <div>
-        {props.cars.map((car) => {
+      <DivGrid>
+        {cars?.map((car) => {
           return(
-            <div key={car.id}>
-              <img  src={car.path} alt="Error" /> 
-            </div>
+            <DivCard key={car.id}>
+              <Link to={car.path}><img src={car.image} alt="Error" width={200}/> </Link>
+              <p>{car.nome}</p>
+            </DivCard>
           )
         })}
-      </div>
+      </DivGrid>
     </>
   )
 }
