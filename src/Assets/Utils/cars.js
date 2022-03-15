@@ -75,7 +75,7 @@ export const cars = [
   },
   {
     id: 8,
-    nome: "Mercedes-Benz C 300 Cabriolet",
+    nome: "Mercedes C 300 Cabriolet",
     preco: 'R$ 313.900',
     motor: '2.0 de 245 cv',
     zeroACem: '6,4 s',
@@ -93,7 +93,7 @@ export const cars = [
   },
   {
     id: 10,
-    nome: "Mercedes-AMG GT C Roadster",
+    nome: "Mercedes-AMG GT C",
     preco: 'R$ 1.212.900',
     motor: 'V8 de 557 cv',
     zeroACem: '3,7 s',
